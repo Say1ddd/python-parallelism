@@ -1,5 +1,21 @@
 # Parallelism dan Multiprocessing di Python
 
+Dua contoh hasil uji coba multiprocessing -- berikut adalah bukti konsep yang saya pelajari dari library `multiprocessing`.
+
+## Hasil
+
+### [Multiprocess_pool.py](./multiprocess_pool.py)
+
+Contoh proses **Pool** dan **mapping** untuk mengkalikan angka dalam list
+
+### [Sequential_numeric.py](./sequential_numeric.py)
+
+Proses menghitung dari 0 hingga 200.000.000 (200 juta) 3 kali berurutan **tanpa parallel processing** berfungsi sebagai patokan
+
+### [Multiprocess_numeric.py](./multiprocess_numeric.py)
+
+Proses menghitung dari 0 hingga 200.000.000 (200 juta) 3 kali proses sekaligus **dengan parallel processing** sebagai bukti dari konsep
+
 ## Pengantar
 
 `multiprocessing` adalah package yang mendukung proses menggunakan API yang mirip dengan modul `threading`. `multiprocessing` menawarkan remote dan local, yang secara efektif melebihi _Global Interpreter Lock_ dengan menggunakan subproses daripada thread. Karena itu, modul `multiprocessor` memungkinkan programmer untuk sepenuhnya memanfaatkan beberapa prosesor CPU pada perangkat tertentu. Modul multiproses juga memperkenalkan API yang tidak memiliki analog dalam modul `threading`. Contoh utamanya adalah objek `Pool` yang menawarkan cara mudah untuk paralel eksekusi function di beberapa nilai input, mendistribusikan data input di seluruh proses (data parallelism).
