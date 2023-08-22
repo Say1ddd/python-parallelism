@@ -1,18 +1,22 @@
+#%%
 import time # import library time
 
+print("menghitung 0 sampai 200000000...")
+
 def worker(num):
-    '''worker function'''
-    for i in range(20000000): number=0 # menghitung ke 20000000, untuk benchmark
-    print("Selesai")
-    return
+    awal = time.time()
+    for _ in range(200000000):
+        pass # menghitung 0 ke 200000000, untuk benchmark
+    akhir = time.time()
+    print(f"Worker {num} selesai, durasi: {akhir-awal} detik \nmenghitung..")
+    return akhir-awal
 
 def start():
+    durasi = 0
     for i in range(3):
-        worker(i)
+        durasi += worker(i)
 
-awal = time.time()
-start()
-akhir = time.time()
-durasi = akhir-awal
+total_durasi = start()
+print(f"Total durasi: {total_durasi} detik") # print durasi proses dari awal hingga selesai
 
-print(durasi) # print durasi proses dari awal hingga selesai
+# %%
