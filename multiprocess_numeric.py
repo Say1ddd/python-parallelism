@@ -1,4 +1,3 @@
-#%%
 import multiprocessing # import library multiprocessing
 import time #import library time
 
@@ -15,7 +14,7 @@ def worker(num):
     print (akhir-awal) # print durasi lama proses
     return
 
-def go():
+def start():
     if __name__ == '__main__': # insert proses di Windows -- tidak diperlukan di Linux
         for i in range(3): # eksekusi 3 proses
             arguments_tuple=(i,) # (num,) -- argument passed ke dalam proses function dalam bentuk tuple
@@ -23,5 +22,4 @@ def go():
             p.start() # memulai proses
             p.join()
 
-go()
-# %%
+start()

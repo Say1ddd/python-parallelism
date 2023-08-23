@@ -1,4 +1,3 @@
-#%%
 import time # import library time
 
 def worker(num):
@@ -7,13 +6,13 @@ def worker(num):
     print("Selesai")
     return
 
-def mulai():
+def start():
     for i in range(3):
         worker(i)
 
 awal = time.time()
-mulai()
+start()
 akhir = time.time()
 durasi = akhir-awal
+
 print(durasi) # print durasi proses dari awal hingga selesai
-# %%
