@@ -1,25 +1,21 @@
 import multiprocessing # import library multiprocessing
-import time #import library time
-
-awal = time.time()
+import time # import library time
 
 # function yang akan dijalankan sebagai 'proses'
 def worker(num):
-    """worker function"""
-    nama_proses = multiprocessing.current_process().name
-    print ('%s: Worker%s, MULAI!' %(nama_proses,num))
-    for i in range(20000000): number=0 # menghitung ke 20000000, untuk benchmarking
-    print (nama_proses," SELESAI!")
-    akhir=time.time()
-    print (akhir-awal) # print durasi lama proses
-    return
+    awal = time.time()
+    for _ in range(200000000): # menghitung ke 200000000, untuk benchmark
+        pass
+    akhir = time.time()
+    print(f"Worker {num} selesai, durasi: {akhir-awal} detik") # print durasi lama proses
+    return akhir-awal
 
 def start():
-    if __name__ == '__main__': # insert proses di Windows -- tidak diperlukan di Linux
-        for i in range(3): # eksekusi 3 proses
-            arguments_tuple=(i,) # (num,) -- argument passed ke dalam proses function dalam bentuk tuple
-            p = multiprocessing.Process(target=worker,args=arguments_tuple) # define proses
-            p.start() # memulai proses
-            p.join()
+    print("menghitung 0 sampai 200000000...")
+    with multiprocessing.Pool() as pool:
+        durasi = max(pool.map(worker, range(3)))
+    return durasi
 
-start()
+if __name__ == "__main__":
+    durasi_final = start()
+    print(f"Total waktu digunakan: {durasi_final} detik")
