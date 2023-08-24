@@ -2,7 +2,7 @@ import time # import library time
 
 def worker(num):
     awal = time.time()
-    for _ in range(200000000): # menghitung 0 ke 200000000, untuk benchmark
+    for __ in range(200000000): # menghitung 0 ke 200000000, untuk benchmark
         pass
     akhir = time.time()
     print(f"Worker {num} selesai, durasi: {akhir-awal} detik \nmenghitung..")
