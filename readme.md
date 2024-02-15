@@ -1,8 +1,8 @@
 # Parallelism dan Multiprocessing di Python
 
-Dua contoh hasil uji coba multiprocessing -- berikut adalah bukti konsep yang saya pelajari dari library `multiprocessing`.
-
 ## Hasil
+
+Dua contoh hasil uji coba multiprocessing -- berikut adalah bukti konsep yang saya pelajari dari library `multiprocessing`.
 
 ### ~~[Multiprocess_pool.py](https://github.com/Say1ddd/python-parallelism/commit/4358132caa9a040a8d58373b74f3cbf67764f609)~~
 
