@@ -16,13 +16,9 @@ Proses menghitung dari 0 hingga 200.000.000 (200 juta) 3 kali berurutan **tanpa 
 
 Proses menghitung dari 0 hingga 200.000.000 (200 juta) 3 kali proses sekaligus **dengan parallel processing** sebagai bukti dari konsep
 
-## Pengantar
-
-`multiprocessing` adalah package yang mendukung proses menggunakan API yang mirip dengan modul `threading`. `multiprocessing` menawarkan remote dan local, yang secara efektif melebihi _Global Interpreter Lock_ dengan menggunakan subproses daripada thread. Karena itu, modul `multiprocessor` memungkinkan programmer untuk sepenuhnya memanfaatkan beberapa prosesor CPU pada perangkat tertentu. Modul multiproses juga memperkenalkan API yang tidak memiliki analog dalam modul `threading`. Contoh utamanya adalah objek `Pool` yang menawarkan cara mudah untuk paralel eksekusi function di beberapa nilai input, mendistribusikan data input di seluruh proses (data parallelism).
-
 ## Pengertian
 
-Salah satu cara untuk mengimplementasikan sistem parallelism adalah menggunakan module `multiprocessing`. Modul `multiprocessing` memungkinkan kita untuk membuat banyak proses, salah satunya adalah dengan interpreter itu sendiri. Python juga memiliki library built-in `threading`, module `multiprocessing` membuat proses baru, sedangkan `threading` membuat threads baru.
+Salah satu cara untuk mengimplementasikan sistem parallelism adalah menggunakan module `multiprocessing`. Modul `multiprocessing` memungkinkan kita untuk membuat banyak proses, salah satunya adalah dengan interpreter itu sendiri. Python juga memiliki library built-in `threading`, module `multiprocessing` membuat proses baru, sedangkan `threading` membuat threads baru. `multiprocessing` adalah package yang mendukung proses menggunakan API yang mirip dengan modul `threading`. `multiprocessing` menawarkan remote dan local, yang secara efektif melebihi _Global Interpreter Lock_ dengan menggunakan subproses daripada thread. Karena itu, modul `multiprocessor` memungkinkan programmer untuk sepenuhnya memanfaatkan beberapa prosesor CPU pada perangkat tertentu. Modul multiproses juga memperkenalkan API yang tidak memiliki analog dalam modul `threading`. Contoh utamanya adalah objek `Pool` yang menawarkan cara mudah untuk paralel eksekusi function di beberapa nilai input, mendistribusikan data input di seluruh proses (data parallelism).
 ![gambar](https://uploads.sitepoint.com/wp-content/uploads/2022/07/1658988061serial_parallel_diagram.jpg)
 
 ## Manfaat
