@@ -4,7 +4,7 @@
 
 Dua contoh hasil uji coba multiprocessing -- berikut adalah bukti konsep yang saya pelajari dari library `multiprocessing`.
 
-### ~~[Multiprocess_pool.py](https://github.com/Say1ddd/python-parallelism/commit/4358132caa9a040a8d58373b74f3cbf67764f609)~~
+### ~~[Multiprocess_pool.py](https://github.com/Say1ddd/python-parallelism/commit/4358132caa9a040a8d58373b74f3cbf67764f609)~~ ( [?](https://github.com/Say1ddd/python-parallelism/commit/4358132caa9a040a8d58373b74f3cbf67764f609#commitcomment-138664697) )
 
 ~~Contoh proses **Pool** dan **mapping** untuk mengkalikan angka dalam list~~
 
